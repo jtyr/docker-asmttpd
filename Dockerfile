@@ -1,8 +1,9 @@
 FROM scratch
 MAINTAINER Jiri Tyr
 
-ADD root.tar.gz /
-EXPOSE 80
-VOLUME /var/www
+COPY asmttpd /asmttpd
+COPY data /data
 
-CMD ["/bin/asmttpd", "/var/www"]
+EXPOSE 80
+
+CMD ["/asmttpd", "/data"]

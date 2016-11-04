@@ -23,7 +23,7 @@ Build the image:
 $ docker build -t jtyr/asmttpd .
 ```
 
-Or pull the data image from Docker Hub:
+Or pull the data image directly from Docker Hub:
 
 ```
 $ docker pull jtyr/asmttpd
@@ -33,20 +33,13 @@ Run the container with the HTML content shared from the host directory
 (e.g. `/path/to/local/www`):
 
 ```
-$ docker run -d -P -v /path/to/local/www:/var/www --name my_asmttpd jtyr/asmttpd
+$ docker run -d -p 8080:80 -v /path/to/local/www:/data jtyr/asmttpd
 ```
 
 Now it should be possible to access the HTTP server on the host's local
 address:
 
 ```
-$ curl http://localhost
-```
-
-The default port 80 can be changed by the Docker port mapping:
-
-```
-$ docker run -d -p 8080:80 -v /path/to/local/www:/var/www --name my_asmttpd jtyr/asmttpd
 $ curl http://localhost:8080
 ```
 
