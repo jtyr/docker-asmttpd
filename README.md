@@ -9,8 +9,8 @@ small (less than 6kB!):
 
 ```
 $ docker images
-REPOSITORY          TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
-jtyr/asmttpd        latest              e7e22cf47359        11 minutes ago      5.603 kB
+REPOSITORY             TAG                 IMAGE ID            CREATED             SIZE
+jtyr/asmttpd           latest              040c73463620        2 minutes ago       5.86kB
 ```
 
 
@@ -23,7 +23,7 @@ Build the image:
 $ docker build -t jtyr/asmttpd .
 ```
 
-Or pull the data image directly from Docker Hub:
+Or pull the image directly from Docker Hub:
 
 ```
 $ docker pull jtyr/asmttpd
