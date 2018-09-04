@@ -7,6 +7,7 @@ RUN apt-get update && apt-get install -y build-essential yasm
 
 ADD https://github.com/nemasu/asmttpd/archive/${asmttpd_version}.tar.gz /tmp
 RUN tar -C /tmp -xf /tmp/${asmttpd_version}.tar.gz
+RUN sed -i -r '/;-----Simple request logging/,/;-----End Simple logging/s/;([^-])/\1/' /tmp/asmttpd-${asmttpd_version}/main.asm
 RUN make -C /tmp/asmttpd-${asmttpd_version} release
 RUN cp /tmp/asmttpd-${asmttpd_version}/asmttpd /tmp
 
