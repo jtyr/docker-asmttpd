@@ -1,7 +1,7 @@
 FROM ubuntu AS builder
 
-ARG asmttpd_version=0.4.4
-ARG elfkickers_version=3.1
+ARG asmttpd_version=0.4.5
+ARG elfkickers_version=3.1a
 
 RUN apt-get update && apt-get install -y build-essential yasm
 
