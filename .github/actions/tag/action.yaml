@@ -14,6 +14,15 @@ runs:
         ${{ github.action_path }}/scripts/version.sh
 
 outputs:
-  version:
-    description: Tag version.
-    value: ${{ steps.tag.outputs.version }}
+  asmttpd_version:
+    description: Asmttpd version.
+    value: ${{ steps.tag.outputs.asmttpd_version }}
+  file_version:
+    description: File version.
+    value: ${{ steps.tag.outputs.file_version }}
+  docker_tag:
+    description: Docker tag.
+    value: ${{ steps.tag.outputs.docker_tag }}
+  git_tag:
+    description: Git Tag.
+    value: ${{ steps.tag.outputs.git_tag }}
