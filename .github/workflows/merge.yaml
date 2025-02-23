@@ -60,4 +60,4 @@ jobs:
           push: true
           tags: >-
             ghcr.io/jtyr/docker/asmttpd:latest,
-            ghcr.io/jtyr/docker/asmttpd:${{ step.tag.version }}
+            ghcr.io/jtyr/docker/asmttpd:${{ steps.tag.version }}
