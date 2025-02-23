@@ -11,5 +11,5 @@ VERSION="$FILE_VERSION+$ASMTTPD_VERSION"
 echo "I: VERSION=$VERSION"
 
 if [[ -n $CI ]]; then
-    echo "$VERSION" >> "$GITHUB_OUTPUT"
+    echo "version=$VERSION" >> "$GITHUB_OUTPUT"
 fi
