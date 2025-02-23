@@ -13,3 +13,6 @@ echo "I: VERSION=$VERSION"
 if [[ -n $CI ]]; then
     echo "version=$VERSION" >> "$GITHUB_OUTPUT"
 fi
+
+git tag "$VERSION"
+git push --tags
