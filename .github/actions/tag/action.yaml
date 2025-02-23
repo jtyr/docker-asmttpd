@@ -1,0 +1,19 @@
+name: Tag
+description: >-
+  This is a GitHub action that composes a Git tag that's composed of the version
+  extracted from the `.version` file and the `asmttpd` version extracted from
+  the `Dockerfile`.
+
+runs:
+  using: composite
+  steps:
+    - name: tag
+      id: tag
+      shell: bash
+      run: >-
+        ${{ github.action_path }}/scripts/version.sh
+
+outputs:
+  version:
+    description: Tag version.
+    value: ${{ steps.tag.version }}
