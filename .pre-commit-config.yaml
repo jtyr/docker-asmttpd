@@ -30,7 +30,7 @@ repos:
       - id: shellcheck
 
   - repo: https://github.com/jtyr/pre-commit-hooks
-    rev: v1.3.6
+    rev: v1.4.0
     hooks:
       - id: check-version
         files: ^(.version|Dockerfile)$
